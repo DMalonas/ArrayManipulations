@@ -38,4 +38,24 @@ public class ArrayHandling implements ArrayManipulation{
         }
         return numOfCharactersToDelete;
     }
+	
+	
+	
+	
+	
+    public int alternatingCharacters(String s) {
+        String temp = "";
+        temp = s.substring(0, 1);
+        int j = 0;
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i - 1) == s.charAt(i)) {
+                j++;
+                continue;
+            }
+            temp += s.substring(i, i + 1);
+        }
+        System.out.println(temp);
+        return j;
+
+    }
 }

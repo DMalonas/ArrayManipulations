@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ApplicationFile {
 
@@ -27,6 +33,30 @@ public class ApplicationFile {
 		String a = "fcrxzwscanmligyxyvym";
 		String b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
 		System.out.println("Number of characters to delete to create two strings that are anagrams: " + ah.makeAnagramFromString(a, b));
+		
+		
+		
+		
+		try {
+			File f = new File("InputForAlternatingCharsMethod.txt");
+			BufferedReader br = new BufferedReader(new FileReader(f));
+			String st;
+			while ((st = br.readLine()) != null) {
+				System.out.println(ah.alternatingCharacters(st));
+			}
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		CollectionsFrmwMethods cfm = new CollectionsFrmwMethods();
+		String[] magazine = {"give", "me", "one", "grand", "today", "night"};//{"ive", "got", "a", "lovely", "bunch", "of", "coconuts"};
+		String[] note = {"give", "me", "one", "grand", "today", "night"};//{"ive", "got", "some", "coconuts"};
+		cfm.checkMagazine(magazine, note);
 	}
 
 }
