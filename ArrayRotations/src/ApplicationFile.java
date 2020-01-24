@@ -23,6 +23,10 @@ public class ApplicationFile {
 		
 		int[][] ar = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
 		System.out.println(ah.getHourGlassSum(ar));
+		
+		String a = "fcrxzwscanmligyxyvym";
+		String b = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+		System.out.println("Number of characters to delete to create two strings that are anagrams: " + ah.makeAnagramFromString(a, b));
 	}
 
 }

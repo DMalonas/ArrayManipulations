@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ArrayHandling implements ArrayManipulation{
 
@@ -17,5 +18,24 @@ public class ArrayHandling implements ArrayManipulation{
 	            }
         }
         return sum;
+    }
+
+	@Override
+	public int makeAnagramFromString(String a, String b) {
+        int[] alph1 = new int[26];
+        Arrays.fill(alph1, 0);
+        int[] alph2 = new int[26];
+        Arrays.fill(alph2, 0);
+        for (int i = 0; i < a.length(); i++) {
+            alph1[a.charAt(i) - 97]++;
+        }
+        for (int i = 0; i < b.length(); i++) {
+                alph2[b.charAt(i) - 97]++;
+        }
+        int numOfCharactersToDelete = 0;
+        for (int i = 0; i < alph1.length; i++) {
+            numOfCharactersToDelete += Math.abs(alph1[i] - alph2[i]); 
+        }
+        return numOfCharactersToDelete;
     }
 }
