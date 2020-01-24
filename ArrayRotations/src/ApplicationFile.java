@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 public class ApplicationFile {
 
@@ -57,6 +58,13 @@ public class ApplicationFile {
 		String[] magazine = {"give", "me", "one", "grand", "today", "night"};//{"ive", "got", "a", "lovely", "bunch", "of", "coconuts"};
 		String[] note = {"give", "me", "one", "grand", "today", "night"};//{"ive", "got", "some", "coconuts"};
 		cfm.checkMagazine(magazine, note);
+		
+
+		System.out.println();
+		
+		boolean isSubstring = cfm.checkIfCommonSubString("Hello", "world");
+		System.out.println(isSubstring);
+		System.out.println(cfm.checkIfCommonSubString("Hi", "World"));
 	}
 
 }

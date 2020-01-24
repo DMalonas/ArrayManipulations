@@ -30,4 +30,36 @@ public class CollectionsFrmwMethods implements CollectionsFrameworkInterface {
         }
         System.out.print("Yes");
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public boolean checkIfCommonSubString(String s1, String s2) {
+        String[] sa1 = s1.split("");
+        String[] sa2 = s2.split("");
+        Map<String, Integer> sam1 = new HashMap<String, Integer>();
+        Map<String, Integer> sam2 = new HashMap<String, Integer>();
+
+        for (int i = 0; i < sa1.length; i++) {
+            if(!sam1.containsKey(sa1[i])) {
+                sam1.put(sa1[i], i);
+            }
+        }
+        for (int i = 0; i < sa2.length; i++) {
+            if(sam1.containsKey(sa2[i])) {
+                return true;
+            }
+        }        
+        return false;
+    }
 }
