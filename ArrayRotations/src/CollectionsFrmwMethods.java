@@ -147,7 +147,7 @@ public class CollectionsFrmwMethods implements CollectionsFrameworkInterface {
 	
 	
 	//https://www.hackerrank.com/challenges/sock-merchant/problem
-    public int sockMerchant(int n, int[] ar) {
+	public int sockMerchant(int n, int[] ar) {
         List<Integer> fr_li = new ArrayList<Integer>(Collections.nCopies(100, 0));
         int pairs = 0;
         for (int i = 0; i < ar.length; i++) {
@@ -158,7 +158,28 @@ public class CollectionsFrmwMethods implements CollectionsFrameworkInterface {
             }
         }
         return pairs;
-    	
+	}
+	
+    public int socketMerchantLowPerf(int n, int[] arr) {
+    	int[] visited = new int[n];
+    	Arrays.fill(visited, 0);
+    	int pairs = 0;
+    	for(int i = 0; i < n; i++) {
+    		if(visited[i] == 1)
+    			continue;
+    		visited[i] = 1;
+    		int count = 1;
+    		for(int j = i + 1; j < n; j++) {
+    			if(arr[i] == arr[j]) {
+    				count++;
+    				visited[j] = 1;
+    				break;
+    			}
+    		}
+    		if(count > 1)
+    			pairs++;
+    	}
+    	return pairs;//        return pairs;    	
     }
 
 }

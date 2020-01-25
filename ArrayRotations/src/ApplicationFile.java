@@ -92,6 +92,12 @@ public class ApplicationFile {
 		int n = 9;
 		int[] ar3 = {10, 20, 20, 10, 10, 30, 50, 10, 20};
 		System.out.println("pairs :: " + cfm.sockMerchant(n, ar3));
+		
+		
+		//int n = 9;
+		//int[] ar3 = {10, 20, 20, 10, 10, 30, 50, 10, 20};
+		System.out.println("pairs :: " + cfm.socketMerchantLowPerf(n, ar3));
+		
 	}
 
 }
