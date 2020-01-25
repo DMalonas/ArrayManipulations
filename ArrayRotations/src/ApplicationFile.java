@@ -98,6 +98,11 @@ public class ApplicationFile {
 		//int[] ar3 = {10, 20, 20, 10, 10, 30, 50, 10, 20};
 		System.out.println("pairs :: " + cfm.socketMerchantLowPerf(n, ar3));
 		
+		
+		GreedyAlgs ga = new GreedyAlgs();
+		n = 3;
+		int ar5[][] = {{5, 1}, {2, 1}, {1, 1}, {8, 1}, {10, 0}, {5, 0}};
+		System.out.println("\nluck generator value: " + ga.luckBalance(n, ar5));
 	}
 
 }

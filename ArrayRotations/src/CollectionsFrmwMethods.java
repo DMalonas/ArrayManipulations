@@ -160,6 +160,7 @@ public class CollectionsFrmwMethods implements CollectionsFrameworkInterface {
         return pairs;
 	}
 	
+	//https://www.hackerrank.com/challenges/sock-merchant/problem
     public int socketMerchantLowPerf(int n, int[] arr) {
     	int[] visited = new int[n];
     	Arrays.fill(visited, 0);
