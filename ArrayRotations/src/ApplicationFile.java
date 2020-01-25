@@ -4,7 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class ApplicationFile {
 
@@ -65,6 +69,29 @@ public class ApplicationFile {
 		boolean isSubstring = cfm.checkIfCommonSubString("Hello", "world");
 		System.out.println(isSubstring);
 		System.out.println(cfm.checkIfCommonSubString("Hi", "World"));
+		
+		
+		List<String> usernames = new ArrayList<String>();
+		usernames.add("bob");
+		usernames.add("alice");
+		usernames.add("bob");
+		usernames.add("alice");
+		usernames.add("bob");
+		usernames.add("alice");
+
+		usernames = cfm.usernamesSystem(usernames);
+		System.out.println(usernames.toString());
+		
+		
+		int x = 3;
+		List<Integer> testList = new ArrayList<Integer>(Arrays.asList(1, 5, 1, 2, 3, 1, 2));//1, 5, 1, 2, 3, 1, 2
+
+		System.out.println(cfm.segment2(x, testList));
+		
+
+		int n = 9;
+		int[] ar3 = {10, 20, 20, 10, 10, 30, 50, 10, 20};
+		System.out.println("pairs :: " + cfm.sockMerchant(n, ar3));
 	}
 
 }
