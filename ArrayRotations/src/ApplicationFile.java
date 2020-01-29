@@ -27,7 +27,7 @@ public class ApplicationFile {
 		for (Method method : CollectionsFrmwMethods.class.getDeclaredMethods()) {
             String name = method.getName();
 
-            if(name.equals("printArray"))
+            if(name.equals("checkIfCommonSubString"))
                 count++;
         }
 
