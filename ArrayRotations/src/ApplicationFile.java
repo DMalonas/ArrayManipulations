@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,6 +15,27 @@ import java.util.Scanner;
 public class ApplicationFile {
 
 	public static void main(String[] args) {
+		
+		
+		
+		/***********************
+		 * 
+		 * 
+		 * Check for method overloading, method
+		 */
+		int count = 0;
+		for (Method method : CollectionsFrmwMethods.class.getDeclaredMethods()) {
+            String name = method.getName();
+
+            if(name.equals("printArray"))
+                count++;
+        }
+
+        if(count > 1)System.out.println("Method overloading is not allowed!");
+        /***********************************************************************/
+        
+        
+   
 		// TODO Auto-generated method stub
 		Rotation t = new Rotation();
 		ArrayHandling ah = new ArrayHandling();
@@ -108,6 +130,8 @@ public class ApplicationFile {
 		
 		String input = "{{([])}}";
 		System.out.println("string is balanced : " +  ah.isBalancedString(input));
+		
+		
 
 	}
 
