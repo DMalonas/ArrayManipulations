@@ -3,6 +3,16 @@ import java.util.Stack;
 
 public class ArrayHandling implements ArrayManipulation{
 
+	
+	/**************************************************************88
+	 * Generics method to print arrays of different data types
+	 */
+	public <E> void printArray(E[] inputArray) {
+		for (E element : inputArray) {
+			System.out.printf("%s\n", element);
+		}
+	}
+	
     public int getHourGlassSum(int[][] arr) {
         int sum = 0;
         boolean isFirstSum = true;
