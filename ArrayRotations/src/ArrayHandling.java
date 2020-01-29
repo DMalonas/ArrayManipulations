@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Stack;
 
 public class ArrayHandling implements ArrayManipulation{
 
@@ -57,5 +58,36 @@ public class ArrayHandling implements ArrayManipulation{
         System.out.println(temp);
         return j;
 
+    }
+    
+    
+    static boolean isBalancedString(String input) {
+        Stack<Character> st = new Stack<Character>();
+
+        for (char ch : input.toCharArray()) {
+            switch (ch) {
+                case '{':
+                case '(':
+                case '[':
+                    st.push(ch);
+                    break;
+                case '}':
+                    if (st.isEmpty() || st.pop() != '{') {
+                        return false;
+                    }
+                    break;
+                case ')':
+                    if (st.isEmpty() || st.pop() != '(') {
+                        return false;
+                    }
+                    break;
+                case ']':
+                    if (st.isEmpty() || st.pop() != '[') {
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return st.isEmpty();
     }
 }

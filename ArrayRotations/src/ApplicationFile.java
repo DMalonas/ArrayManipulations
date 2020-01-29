@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class ApplicationFile {
 
@@ -103,6 +104,11 @@ public class ApplicationFile {
 		n = 3;
 		int ar5[][] = {{5, 1}, {2, 1}, {1, 1}, {8, 1}, {10, 0}, {5, 0}};
 		System.out.println("\nluck generator value: " + ga.luckBalance(n, ar5));
+		
+		
+		String input = "{{([])}}";
+		System.out.println("string is balanced : " +  ah.isBalancedString(input));
+
 	}
 
 }
